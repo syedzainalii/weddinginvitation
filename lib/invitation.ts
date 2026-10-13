@@ -13,15 +13,6 @@ export const invitation = {
   groomParents: "S/o Khawaja Qaiser Ahmed",
   brideParents: "D/o M. Waseem Akhtar",
 
-  // Quran verse about marriage (Surah Ar-Rum 30:21)
-  verse:
-    "And among His signs is that He created for you mates from among yourselves, that you may find tranquility in them, and He placed between you love and mercy.",
-  verseRef: "Surah Ar-Rum (30:21)",
-
-  // Traditional dua for the newly married
-  duaArabic: "بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
-  duaMeaning:
-    "May Allah bless you both, shower His blessings upon you, and unite you in goodness.",
 
   event: {
     title: "Nikkah Ceremony",
