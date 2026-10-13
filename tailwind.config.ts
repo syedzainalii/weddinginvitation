@@ -19,6 +19,8 @@ const config: Config = {
       fontFamily: {
         serif: ["var(--font-serif)", "Georgia", "serif"],
         script: ["var(--font-script)", "cursive"],
+        arabic: ["var(--font-arabic)", "serif"],
+        bismillah: ["var(--font-bismillah)", "var(--font-arabic)", "serif"],
       },
     },
   },

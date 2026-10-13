@@ -1,5 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Pinyon_Script } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Pinyon_Script,
+  Amiri,
+  Aref_Ruqaa,
+} from "next/font/google";
 import "./globals.css";
 import { invitation } from "@/lib/invitation";
 
@@ -14,6 +19,20 @@ const script = Pinyon_Script({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-script",
+  display: "swap",
+});
+
+const arabic = Amiri({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  variable: "--font-arabic",
+  display: "swap",
+});
+
+const bismillah = Aref_Ruqaa({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  variable: "--font-bismillah",
   display: "swap",
 });
 
@@ -50,7 +69,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${serif.variable} ${script.variable}`}>
+    <html
+      lang="en"
+      className={`${serif.variable} ${script.variable} ${arabic.variable} ${bismillah.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

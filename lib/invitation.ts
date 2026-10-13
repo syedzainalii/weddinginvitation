@@ -5,13 +5,13 @@ export const invitation = {
   groom: "Nabeel Omer",
   monogram: "S & N",
 
-  // Parents (shown under the welcome message)
-  brideParents: "Daughter of Mr. M. Waseem Akhtar",
-  groomParents: "Son of Mr. Khawaja Qaiser Ahmed",
+  // Bismillah shown at the very top
+  bismillah: "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
 
-  // Short welcome line shown above the verse
-  message:
-    "With the blessings of Allah, we joyfully invite you to witness the Nikkah of Saleha & Nabeel Omer. Your presence and duas will make this blessed day complete.",
+  // Hosts (the groom's parents) and the lines under each name
+  hosts: "Mr. & Mrs. Khawaja Qaiser Ahmed",
+  groomParents: "S/o Khawaja Qaiser Ahmed",
+  brideParents: "D/o M. Waseem Akhtar",
 
   // Quran verse about marriage (Surah Ar-Rum 30:21)
   verse:

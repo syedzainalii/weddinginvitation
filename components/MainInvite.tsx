@@ -13,21 +13,6 @@ const fade = {
   show: { opacity: 1, y: 0 },
 };
 
-function CoupleArt() {
-  const hasPhoto = useImageExists("/images/couple.png");
-  if (hasPhoto) {
-    // eslint-disable-next-line @next/next/no-img-element
-    return (
-      <img
-        src="/images/couple.png"
-        alt="The couple"
-        className="mx-auto w-full max-w-xs"
-      />
-    );
-  }
-  return null;
-}
-
 function Banner({ src, bottom = false }: { src: string; bottom?: boolean }) {
   const exists = useImageExists(src);
   if (!exists) {
@@ -64,21 +49,22 @@ export default function MainInvite({ show }: { show: boolean }) {
   const {
     bride,
     groom,
-    message,
+    bismillah,
+    hosts,
+    groomParents,
+    brideParents,
     verse,
     verseRef,
     duaArabic,
     duaMeaning,
     event,
-    brideParents,
-    groomParents,
   } = invitation;
   const state = show ? "show" : "hidden";
 
   return (
     <div className="paper relative mx-auto w-full max-w-md">
       {/* Hero */}
-      <section className="relative flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden px-6 pb-24 pt-28 text-center">
+      <section className="relative flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden px-6 pb-24 pt-24 text-center">
         <Banner src="/images/flowers-top.png" />
         <Banner src="/images/flowers-bottom.png" bottom />
 
@@ -90,41 +76,55 @@ export default function MainInvite({ show }: { show: boolean }) {
         >
           <motion.p
             variants={fade}
-            className="text-xs uppercase tracking-[0.4em] text-gold-dark"
+            dir="rtl"
+            lang="ar"
+            className="font-bismillah text-4xl leading-relaxed text-rose-dark sm:text-5xl"
           >
-            In the name of Allah
+            {bismillah}
           </motion.p>
-          <motion.p variants={fade} className="mt-6 text-sm tracking-[0.3em] text-maroon">
-            THE NIKKAH OF
-          </motion.p>
+
+          <motion.div variants={fade} className="mt-5 text-base leading-relaxed text-maroon">
+            <p>With the blessings of Allah,</p>
+            <p className="mt-1 text-lg font-bold">{hosts}</p>
+            <p className="mt-1">
+              are delighted to invite you to the Nikkah Ceremony of their beloved son
+            </p>
+          </motion.div>
+
           <motion.h1
             variants={fade}
             className="gold-text mt-4 font-script text-6xl leading-[1.1] sm:text-7xl"
           >
-            {bride}
+            {groom}
           </motion.h1>
-          <motion.p variants={fade} className="font-script text-4xl text-rose-dark">
+          <motion.p variants={fade} className="text-sm tracking-wide text-maroon">
+            {groomParents}
+          </motion.p>
+
+          <motion.p variants={fade} className="mt-2 font-script text-4xl text-gold-dark">
             &amp;
           </motion.p>
+
           <motion.h1
             variants={fade}
             className="gold-text font-script text-6xl leading-[1.1] sm:text-7xl"
           >
-            {groom}
+            {bride}
           </motion.h1>
-          <motion.div variants={fade} className="mt-6">
-            <CoupleArt />
-          </motion.div>
-          <motion.p variants={fade} className="mt-4 text-sm tracking-widest text-maroon">
+          <motion.p variants={fade} className="text-sm tracking-wide text-maroon">
+            {brideParents}
+          </motion.p>
+
+          <motion.p variants={fade} className="mt-6 text-sm tracking-widest text-maroon">
             {event.day} &middot; {event.date}
           </motion.p>
-          <motion.p variants={fade} className="mt-6 text-xs text-gold-dark">
+          <motion.p variants={fade} className="mt-4 text-xs text-gold-dark">
             Scroll down
           </motion.p>
         </motion.div>
       </section>
 
-      {/* Message */}
+      {/* Verse and dua */}
       <motion.section
         className="px-8 py-12 text-center"
         initial="hidden"
@@ -134,12 +134,6 @@ export default function MainInvite({ show }: { show: boolean }) {
         transition={{ duration: 0.8 }}
       >
         <Ornament />
-        <p className="mt-6 text-base leading-relaxed text-maroon">{message}</p>
-
-        <div className="mt-6 space-y-1 text-sm tracking-wide text-maroon/90">
-          <p>{brideParents}</p>
-          <p>{groomParents}</p>
-        </div>
 
         <blockquote className="mx-auto mt-8 max-w-xs">
           <p className="text-lg italic leading-relaxed text-maroon">&ldquo;{verse}&rdquo;</p>
@@ -149,7 +143,7 @@ export default function MainInvite({ show }: { show: boolean }) {
         </blockquote>
 
         <div className="mt-8">
-          <p dir="rtl" lang="ar" className="text-2xl leading-loose text-maroon">
+          <p dir="rtl" lang="ar" className="font-arabic text-2xl leading-loose text-maroon">
             {duaArabic}
           </p>
           <p className="mt-2 text-sm italic text-rose-dark">{duaMeaning}</p>
