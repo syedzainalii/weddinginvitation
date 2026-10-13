@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ivory: #fbf6ee;
+}
+
+html,
+body {
+  background: var(--ivory);
+  color: #3d1220;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-serif), Georgia, serif;
+  min-height: 100dvh;
+}
+
+.paper {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(227, 200, 135, 0.18), transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(201, 120, 138, 0.12), transparent 60%),
+    #fbf6ee;
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #8a6a24, #e3c887 45%, #b8923f 70%, #8a6a24);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid #b8923f;
+  background: linear-gradient(135deg, #b8923f, #e3c887 50%, #b8923f);
+  color: #3d1220;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 14px rgba(184, 146, 63, 0.35);
+  transition: transform 0.15s ease;
+}
+.btn-gold:active {
+  transform: scale(0.97);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 9999px;
+  border: 1px solid #b8923f;
+  color: #5b1e2d;
+  background: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  transition: transform 0.15s ease;
+}
+.btn-outline:active {
+  transform: scale(0.97);
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate3d(var(--drift, 40px), 110vh, 0) rotate(540deg);
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal {
+    display: none;
+  }
+}
