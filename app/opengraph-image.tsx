@@ -7,6 +7,12 @@ export const contentType = "image/png";
 
 export default function OgImage() {
   const { bride, groom, event, venue } = invitation;
+
+  // Each <div> holds a single string, which is what the image generator requires.
+  const names = `${bride} & ${groom}`;
+  const when = `${event.day}, ${event.date} at ${event.time}`;
+  const where = `${venue.name}, ${venue.area}`;
+
   return new ImageResponse(
     (
       <div
@@ -23,17 +29,13 @@ export default function OgImage() {
           fontFamily: "serif",
         }}
       >
-        <div style={{ fontSize: 34, letterSpacing: 8, color: "#8a6a24" }}>
+        <div style={{ display: "flex", fontSize: 34, letterSpacing: 8, color: "#8a6a24" }}>
           NIKKAH INVITATION
         </div>
-        <div style={{ fontSize: 96, marginTop: 24, display: "flex" }}>
-          {bride} &amp; {groom}
-        </div>
-        <div style={{ fontSize: 40, marginTop: 28 }}>
-          {event.day}, {event.date} at {event.time}
-        </div>
-        <div style={{ fontSize: 30, marginTop: 12, color: "#8a6a24" }}>
-          {venue.name}, {venue.area}
+        <div style={{ display: "flex", fontSize: 96, marginTop: 24 }}>{names}</div>
+        <div style={{ display: "flex", fontSize: 40, marginTop: 28 }}>{when}</div>
+        <div style={{ display: "flex", fontSize: 30, marginTop: 12, color: "#8a6a24" }}>
+          {where}
         </div>
       </div>
     ),
