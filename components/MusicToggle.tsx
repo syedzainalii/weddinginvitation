@@ -6,19 +6,23 @@ import { useFileExists } from "@/lib/useImageExists";
 const SRC = "/audio/nikkah.mp3";
 
 // Only renders if public/audio/nikkah.mp3 exists.
-// Starts muted after the cover is tapped; guest taps the button to hear it.
+// Starts playing unmuted after the cover is tapped.
 export default function MusicToggle({ started }: { started: boolean }) {
   const exists = useFileExists(SRC);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [muted, setMuted] = useState(true);
+  const [muted, setMuted] = useState(false); // Start unmuted
 
   useEffect(() => {
     if (!exists || !started) return;
     const a = audioRef.current;
     if (!a) return;
-    a.muted = true;
+    
+    a.muted = false;
     a.loop = true;
-    a.play().catch(() => {});
+    a.play().catch(() => {
+      // Fallback if browser autoplay policy blocks unmuted audio
+      setMuted(true);
+    });
   }, [exists, started]);
 
   if (!exists) return null;
