@@ -5,11 +5,23 @@ export const invitation = {
   groom: "Nabeel Omer",
   monogram: "S & N",
 
-  brideParents: "Daughter of Mr. & Mrs. (Bride's Father)", // <- your text
-  groomParents: "Son of Mr. & Mrs. (Groom's Father)", // <- your text
+  // Parents (shown under the welcome message)
+  brideParents: "Daughter of Mr. M. Waseem Akhtar",
+  groomParents: "Son of Mr. Khawaja Qaiser Ahmed",
 
+  // Short welcome line shown above the verse
   message:
-    "With the blessings of Allah, we joyfully invite you to witness and celebrate the Nikkah of our beloved children.",
+    "With the blessings of Allah, we joyfully invite you to witness the Nikkah of Saleha & Nabeel Omer. Your presence and duas will make this blessed day complete.",
+
+  // Quran verse about marriage (Surah Ar-Rum 30:21)
+  verse:
+    "And among His signs is that He created for you mates from among yourselves, that you may find tranquility in them, and He placed between you love and mercy.",
+  verseRef: "Surah Ar-Rum (30:21)",
+
+  // Traditional dua for the newly married
+  duaArabic: "بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
+  duaMeaning:
+    "May Allah bless you both, shower His blessings upon you, and unite you in goodness.",
 
   event: {
     title: "Nikkah Ceremony",
@@ -24,9 +36,9 @@ export const invitation = {
   },
 
   venue: {
-    name: "Venue Name", // <- your venue
-    area: "Area, Karachi", // <- your area
-    full: "Venue Name, Area, Karachi, Pakistan", // <- your full address
+    name: "Jauhar Arena",
+    area: "Karachi",
+    full: "Jauhar Arena, Karachi, Pakistan",
     mapsUrl: "https://maps.app.goo.gl/3ZqF3Pj51iVJFfDX6?g_st=aw",
   },
 

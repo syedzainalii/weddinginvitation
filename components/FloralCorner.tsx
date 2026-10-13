@@ -46,7 +46,7 @@ export default function FloralCorner({
       style={{ transform: flip ? "scale(-1,-1)" : undefined }}
     >
       {/* stems and leaves */}
-      <g stroke="#6f8a6a" strokeWidth="2" fill="none" strokeLinecap="round">
+      <g stroke="#2f6b4a" strokeWidth="2" fill="none" strokeLinecap="round">
         <path d="M0 40 C60 50, 110 90, 150 170" />
         <path d="M30 0 C50 60, 90 110, 170 150" />
       </g>
@@ -64,20 +64,20 @@ export default function FloralCorner({
           cy={y}
           rx="16"
           ry="6"
-          fill="#8ea58a"
+          fill="#3f7a57"
           opacity="0.9"
           transform={`rotate(${rot} ${x} ${y})`}
         />
       ))}
-      <Flower cx={34} cy={34} r={30} fill="#c9788a" />
-      <Flower cx={92} cy={26} r={18} fill="#f1c9d0" />
-      <Flower cx={26} cy={96} r={18} fill="#f1c9d0" />
-      <Flower cx={78} cy={78} r={22} fill="#e8a3b1" />
-      <Flower cx={132} cy={56} r={12} fill="#c9788a" />
-      <Flower cx={56} cy={140} r={12} fill="#c9788a" />
-      <circle cx="120" cy="20" r="4" fill="#e3c887" />
-      <circle cx="18" cy="130" r="4" fill="#e3c887" />
-      <circle cx="108" cy="104" r="3" fill="#e3c887" />
+      <Flower cx={34} cy={34} r={30} fill="#b8923f" />
+      <Flower cx={92} cy={26} r={18} fill="#ffffff" />
+      <Flower cx={26} cy={96} r={18} fill="#ffffff" />
+      <Flower cx={78} cy={78} r={22} fill="#f3ead6" />
+      <Flower cx={132} cy={56} r={12} fill="#b8923f" />
+      <Flower cx={56} cy={140} r={12} fill="#b8923f" />
+      <circle cx="120" cy="20" r="4" fill="#b8923f" />
+      <circle cx="18" cy="130" r="4" fill="#b8923f" />
+      <circle cx="108" cy="104" r="3" fill="#b8923f" />
     </svg>
   );
 }

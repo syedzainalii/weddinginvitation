@@ -41,7 +41,7 @@ export default function ScratchHeart() {
     ctx.lineWidth = 3;
     ctx.strokeStyle = "#8a6a24";
     ctx.stroke();
-    ctx.fillStyle = "rgba(91,30,45,0.75)";
+    ctx.fillStyle = "rgba(15,61,46,0.75)";
     ctx.font = "600 18px Georgia, serif";
     ctx.textAlign = "center";
     ctx.fillText("Scratch to reveal", W / 2, H * 0.52);
@@ -93,8 +93,8 @@ export default function ScratchHeart() {
           <svg viewBox={`0 0 ${W} ${H}`} className="absolute inset-0 h-full w-full">
             <path
               d={`M${W / 2} ${H * 0.92} C${-W * 0.1} ${H * 0.55}, ${W * 0.08} ${-H * 0.02}, ${W / 2} ${H * 0.28} C${W * 0.92} ${-H * 0.02}, ${W * 1.1} ${H * 0.55}, ${W / 2} ${H * 0.92} Z`}
-              fill="#fdeef1"
-              stroke="#c9788a"
+              fill="#eef7f0"
+              stroke="#4f8f6a"
               strokeWidth="2"
             />
           </svg>

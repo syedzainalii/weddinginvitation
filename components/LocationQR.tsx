@@ -12,7 +12,7 @@ export default function LocationQR() {
         size={150}
         level="M"
         bgColor="#ffffff"
-        fgColor="#3d1220"
+        fgColor="#082a1f"
         marginSize={2}
       />
       <p className="mt-2 text-xs uppercase tracking-[0.25em] text-gold-dark">

@@ -9,7 +9,7 @@
 html,
 body {
   background: var(--ivory);
-  color: #3d1220;
+  color: #082a1f;
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
 }
@@ -22,7 +22,7 @@ body {
 .paper {
   background:
     radial-gradient(ellipse at 50% 0%, rgba(227, 200, 135, 0.18), transparent 60%),
-    radial-gradient(ellipse at 50% 100%, rgba(201, 120, 138, 0.12), transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(79, 143, 106, 0.14), transparent 60%),
     #fbf6ee;
 }
 
@@ -42,7 +42,7 @@ body {
   border-radius: 9999px;
   border: 1px solid #b8923f;
   background: linear-gradient(135deg, #b8923f, #e3c887 50%, #b8923f);
-  color: #3d1220;
+  color: #082a1f;
   font-weight: 600;
   letter-spacing: 0.04em;
   box-shadow: 0 4px 14px rgba(184, 146, 63, 0.35);
@@ -60,7 +60,7 @@ body {
   padding: 0.7rem 1.4rem;
   border-radius: 9999px;
   border: 1px solid #b8923f;
-  color: #5b1e2d;
+  color: #0f3d2e;
   background: rgba(255, 255, 255, 0.6);
   font-weight: 600;
   transition: transform 0.15s ease;

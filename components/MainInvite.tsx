@@ -25,18 +25,7 @@ function CoupleArt() {
       />
     );
   }
-  // Simple built-in SVG: two seated figures seen from behind
-  return (
-    <svg viewBox="0 0 240 150" className="mx-auto w-full max-w-xs" aria-hidden="true">
-      <ellipse cx="120" cy="140" rx="100" ry="8" fill="#e8d5b5" opacity="0.7" />
-      <path d="M62 140 C58 100 70 78 92 74 C112 74 120 100 118 140 Z" fill="#5b1e2d" />
-      <circle cx="90" cy="58" r="15" fill="#3d1220" />
-      <path d="M72 62 C66 90 74 110 80 118 C94 104 100 80 100 62 Z" fill="#8a6a24" opacity="0.85" />
-      <path d="M122 140 C122 98 132 80 156 76 C176 78 184 104 180 140 Z" fill="#f7efe0" stroke="#b8923f" />
-      <circle cx="150" cy="58" r="15" fill="#3d1220" />
-      <path d="M130 60 C130 38 170 38 170 60 C166 52 134 52 130 60Z" fill="#b8923f" />
-    </svg>
-  );
+  return null;
 }
 
 function Banner({ src, bottom = false }: { src: string; bottom?: boolean }) {
@@ -72,7 +61,18 @@ function Banner({ src, bottom = false }: { src: string; bottom?: boolean }) {
 }
 
 export default function MainInvite({ show }: { show: boolean }) {
-  const { bride, groom, message, event, brideParents, groomParents } = invitation;
+  const {
+    bride,
+    groom,
+    message,
+    verse,
+    verseRef,
+    duaArabic,
+    duaMeaning,
+    event,
+    brideParents,
+    groomParents,
+  } = invitation;
   const state = show ? "show" : "hidden";
 
   return (
@@ -134,10 +134,25 @@ export default function MainInvite({ show }: { show: boolean }) {
         transition={{ duration: 0.8 }}
       >
         <Ornament />
-        <p className="mt-6 text-lg italic leading-relaxed text-maroon">{message}</p>
-        <div className="mt-8 space-y-2 text-sm text-maroon/90">
+        <p className="mt-6 text-base leading-relaxed text-maroon">{message}</p>
+
+        <div className="mt-6 space-y-1 text-sm tracking-wide text-maroon/90">
           <p>{brideParents}</p>
           <p>{groomParents}</p>
+        </div>
+
+        <blockquote className="mx-auto mt-8 max-w-xs">
+          <p className="text-lg italic leading-relaxed text-maroon">&ldquo;{verse}&rdquo;</p>
+          <footer className="mt-2 text-xs uppercase tracking-[0.25em] text-gold-dark">
+            {verseRef}
+          </footer>
+        </blockquote>
+
+        <div className="mt-8">
+          <p dir="rtl" lang="ar" className="text-2xl leading-loose text-maroon">
+            {duaArabic}
+          </p>
+          <p className="mt-2 text-sm italic text-rose-dark">{duaMeaning}</p>
         </div>
         <Ornament className="mt-6" />
       </motion.section>

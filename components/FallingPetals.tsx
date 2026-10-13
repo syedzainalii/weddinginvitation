@@ -12,7 +12,7 @@ type Petal = {
   color: string;
 };
 
-const COLORS = ["#f1c9d0", "#e8a3b1", "#c9788a", "#f7dde2"];
+const COLORS = ["#cfe6d6", "#8dbf9f", "#4f8f6a", "#e3f1e7"];
 
 export default function FallingPetals({ count = 14 }: { count?: number }) {
   const [petals, setPetals] = useState<Petal[]>([]);

@@ -50,16 +50,11 @@ export default function DetailsSection() {
 
         <div>
           <h3 className="font-script text-3xl text-maroon">Contact</h3>
-          <div className="mt-3 flex flex-col items-center gap-4">
+          <div className="mt-3 flex flex-col items-center gap-3">
             {contacts.map((c) => (
-              <div key={c.phone} className="flex flex-col items-center">
-                <a href={`tel:${c.phone}`} className="btn-outline">
-                  Call {c.name}
-                </a>
-                <p className="mt-1 text-sm tracking-wide text-gold-dark">
-                  {c.display}
-                </p>
-              </div>
+              <a key={c.phone} href={`tel:${c.phone}`} className="btn-outline">
+                {c.name}
+              </a>
             ))}
           </div>
         </div>

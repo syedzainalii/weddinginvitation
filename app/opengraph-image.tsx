@@ -23,9 +23,9 @@ export default function OgImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #fbf6ee, #f1c9d0)",
+          background: "linear-gradient(135deg, #fbf6ee, #cfe6d6)",
           border: "14px solid #b8923f",
-          color: "#5b1e2d",
+          color: "#0f3d2e",
           fontFamily: "serif",
         }}
       >
