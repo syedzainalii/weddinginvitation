@@ -13,6 +13,11 @@ export const invitation = {
   groomParents: "S/o Khawaja Qaiser Ahmed",
   brideParents: "D/o M. Waseem Akhtar",
 
+  // Quranic Verse and Dua details
+  verse: "And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy.",
+  verseRef: "Surah Ar-Rum 30:21",
+  duaArabic: "بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
+  duaMeaning: "May Allah bless you, and shower His blessings upon you, and join you together in goodness.",
 
   event: {
     title: "Nikkah Ceremony",
