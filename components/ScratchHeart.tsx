@@ -89,7 +89,7 @@ export default function ScratchHeart() {
     <div className="flex flex-col items-center">
       <div className="relative" style={{ width: W, height: H, maxWidth: "100%" }}>
         {/* revealed content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+        <div className="absolute inset-0 flex flex-col items-center justify-center pt-12 text-center">
           <svg viewBox={`0 0 ${W} ${H}`} className="absolute inset-0 h-full w-full">
             <path
               d={`M${W / 2} ${H * 0.92} C${-W * 0.1} ${H * 0.55}, ${W * 0.08} ${-H * 0.02}, ${W / 2} ${H * 0.28} C${W * 0.92} ${-H * 0.02}, ${W * 1.1} ${H * 0.55}, ${W / 2} ${H * 0.92} Z`}
@@ -98,7 +98,7 @@ export default function ScratchHeart() {
               strokeWidth="2"
             />
           </svg>
-          <div className="relative -mt-3 px-6">
+          <div className="relative px-6">
             <p className="text-xs uppercase tracking-[0.3em] text-rose-dark">
               {event.day}
             </p>
