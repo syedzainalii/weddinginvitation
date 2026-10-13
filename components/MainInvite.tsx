@@ -53,10 +53,6 @@ export default function MainInvite({ show }: { show: boolean }) {
     hosts,
     groomParents,
     brideParents,
-    verse,
-    verseRef,
-    duaArabic,
-    duaMeaning,
     event,
   } = invitation;
   const state = show ? "show" : "hidden";
@@ -135,19 +131,6 @@ export default function MainInvite({ show }: { show: boolean }) {
       >
         <Ornament />
 
-        <blockquote className="mx-auto mt-8 max-w-xs">
-          <p className="text-lg italic leading-relaxed text-maroon">&ldquo;{verse}&rdquo;</p>
-          <footer className="mt-2 text-xs uppercase tracking-[0.25em] text-gold-dark">
-            {verseRef}
-          </footer>
-        </blockquote>
-
-        <div className="mt-8">
-          <p dir="rtl" lang="ar" className="font-arabic text-2xl leading-loose text-maroon">
-            {duaArabic}
-          </p>
-          <p className="mt-2 text-sm italic text-rose-dark">{duaMeaning}</p>
-        </div>
         <Ornament className="mt-6" />
       </motion.section>
 
